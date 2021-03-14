@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,6 +36,13 @@ class MainActivity : AppCompatActivity() {
         val dice2 = Dice(6)
 
         rollButton.setOnClickListener{
+
+            val text = "Zar atıldı"
+            val duration = Toast.LENGTH_SHORT
+
+            val toast = Toast.makeText(applicationContext, text, duration)
+            toast.show()
+
             val randomNumber = dice1.roll()
             val randomNumber2 = dice2.roll()
 
